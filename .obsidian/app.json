@@ -1,0 +1,15 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "showLineNumber": true,
+  "spellcheck": false,
+  "showIndentGuide": true,
+  "strictLineBreaks": false,
+  "tabSize": 2,
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./assets",
+  "useMarkdownLinks": true,
+  "newLinkFormat": "shortest"
+}
