@@ -90,13 +90,24 @@ This vault supports Model Context Protocol for seamless integration with Claude 
 
 **Super Simple 3-Step Process** 🦈
 
-When you discover valuable insights in other projects:
+#### Option 1: Global Commands (Recommended)
+```bash
+# Set up once
+./scripts/setup-global-commands.sh
+source ~/.bashrc
 
+# Then from any project directory:
+add-knowledge        # Create knowledge file
+commit-knowledge     # Commit and push
+```
+
+#### Option 2: Direct Script
+When in the vault directory:
 1. **Create File**: `./scripts/add-knowledge.sh` (interactive setup)
 2. **Fill Template**: Edit the created file, replace `[bracketed parts]`  
 3. **Share**: `git add . && git commit -m "docs: add [name]" && git push`
 
-That's it! See [[03-Knowledge/Development/knowledge-sharing-workflow]] for detailed workflow.
+See [[03-Knowledge/Development/knowledge-sharing-workflow]] for detailed workflow.
 
 ### General Contributions
 
