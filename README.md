@@ -48,8 +48,13 @@ ln -s $(pwd)/01-Global/CLAUDE.md ~/.claude/CLAUDE.md
 
 ### Global Configuration
 Use the global CLAUDE.md files for consistent behavior across all projects:
-- `01-Global/CLAUDE.md` - English version (used by Claude)
-- `01-Global/CLAUDE-ja.md` - Japanese version (for documentation)
+- `01-Global/CLAUDE.md` - **Primary configuration** (English, used by Claude Code)
+- `01-Global/CLAUDE-ja.md` - **Documentation version** (Japanese translation for human reference)
+
+**File Management**:
+- `CLAUDE.md` is the authoritative source that Claude Code reads
+- `CLAUDE-ja.md` should be kept in sync with the English version
+- When updating configurations, modify both files to maintain consistency
 
 ### Language-Specific Rules
 Reference language-specific guidelines in your project CLAUDE.md:
