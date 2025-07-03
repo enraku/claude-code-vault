@@ -88,20 +88,15 @@ This vault supports Model Context Protocol for seamless integration with Claude 
 
 ### Adding Knowledge from Other Projects
 
+**Super Simple 3-Step Process** 🦈
+
 When you discover valuable insights in other projects:
 
-1. **Create Knowledge Entry**:
-   ```bash
-   ./scripts/add-knowledge.sh
-   ```
+1. **Create File**: `./scripts/add-knowledge.sh` (interactive setup)
+2. **Fill Template**: Edit the created file, replace `[bracketed parts]`  
+3. **Share**: `git add . && git commit -m "docs: add [name]" && git push`
 
-2. **Follow the Template**: Use `knowledge-template.md` for consistency
-
-3. **Submit PR**: Use the knowledge-addition PR template
-
-4. **Review Process**: Team reviews for accuracy and applicability
-
-See [[03-Knowledge/Development/knowledge-sharing-workflow]] for detailed workflow.
+That's it! See [[03-Knowledge/Development/knowledge-sharing-workflow]] for detailed workflow.
 
 ### General Contributions
 
