@@ -7,7 +7,7 @@
 - [[01-Global/CLAUDE-ja|Global CLAUDE.md (Japanese)]]
 
 ### Language Rules
-- [[02-Languages/JavaScript TypeScript|JavaScript/TypeScript]]
+- [[02-Languages/JavaScript-TypeScript|JavaScript/TypeScript]]
 - [[02-Languages/Python|Python]]
 - [[02-Languages/Go|Go]]
 - [[02-Languages/Rust|Rust]]
