@@ -86,6 +86,25 @@ This vault supports Model Context Protocol for seamless integration with Claude 
 
 ## 🤝 Contributing
 
+### Adding Knowledge from Other Projects
+
+When you discover valuable insights in other projects:
+
+1. **Create Knowledge Entry**:
+   ```bash
+   ./scripts/add-knowledge.sh
+   ```
+
+2. **Follow the Template**: Use `knowledge-template.md` for consistency
+
+3. **Submit PR**: Use the knowledge-addition PR template
+
+4. **Review Process**: Team reviews for accuracy and applicability
+
+See [[03-Knowledge/Development/knowledge-sharing-workflow]] for detailed workflow.
+
+### General Contributions
+
 1. Create a feature branch from `main`
 2. Make your changes following the established structure
 3. Update relevant documentation
