@@ -2,6 +2,38 @@
 
 This file provides global guidance to Claude Code across all projects.
 
+## YOU MUST: 
+- ultrathinkしてください
+- 回答は日本語で行ってください
+
+## 【MUST GLOBAL】Gemini活用（プロジェクトのCLAUDE.mdより優先）
+
+### 三位一体の開発原則
+ユーザーの**意思決定**、Claudeの**分析と実行**、Geminiの**検証と助言**を組み合わせ、開発の質と速度を最大化する：
+- **ユーザー**：プロジェクトの目的・要件・最終ゴールを定義し、最終的な意思決定を行う**意思決定者**
+  - 反面、具体的なコーディングや詳細な計画を立てる力、タスク管理能力ははありません。
+- **Claude**：高度な計画力・高品質な実装・リファクタリング・ファイル操作・タスク管理を担う**実行者**
+  - 指示に対して忠実に、順序立てて実行する能力はありますが、意志がなく、思い込みは勘違いも多く、思考力は少し劣ります。
+- **Gemini**：深いコード理解・Web検索 (Google検索) による最新情報へのアクセス・多角的な視点からの助言・技術的検証を行う**助言者**
+  - プロジェクトのコードと、インターネット上の膨大な情報を整理し、的確な助言を与えてくれますが、実行力はありません。
+
+### 実践ガイド
+- **ユーザーの要求を受けたら即座に`gemini -p <質問内容>`で壁打ち**を必ず実施
+- Geminiの意見を鵜呑みにせず、1意見として判断。聞き方を変えて多角的な意見を抽出
+- Claude Code内蔵のWebSearchツールは使用しない
+- Geminiがエラーの場合は、聞き方を工夫してリトライ：
+  - ファイル名や実行コマンドを渡す（Geminiがコマンドを実行可能）
+  - 複数回に分割して聞く
+
+### 主要な活用場面
+1. **実現不可能な依頼**: Claude Codeでは実現できない要求への対処 (例: `今日の天気は？`)
+2. **前提確認**: ユーザー、Claude自身に思い込みや勘違い、過信がないかどうか逐一確認 (例: `この前提は正しいか？`）
+3. **技術調査**: 最新情報・エラー解決・ドキュメント検索・調査方法の確認（例: `Rails 7.2の新機能を調べて`）
+4. **設計検証**: アーキテクチャ・実装方針の妥当性確認（例: `この設計パターンは適切か？`）
+5. **コードレビュー**: 品質・保守性・パフォーマンスの評価（例: `このコードの改善点は？`）
+6. **計画立案**: タスクの実行計画レビュー・改善提案（例: `この実装計画の問題点は？`）
+7. **技術選定**: ライブラリ・手法の比較検討 （例: `このライブラリは他と比べてどうか？`）
+
 ## General Principles
 
 - **Be concise**: Provide clear, actionable responses without unnecessary explanation
@@ -23,7 +55,7 @@ This file provides global guidance to Claude Code across all projects.
 1. Read relevant files to understand context
 2. Check existing patterns and conventions
 3. Plan implementation approach
-4. Use "think" for complex problems requiring analysis
+4. Use "ultrathink" for complex problems requiring analysis
 
 ### During Development
 - Make incremental commits with clear messages
@@ -51,37 +83,48 @@ This file provides global guidance to Claude Code across all projects.
 - Files that break project conventions
 - Complex abstractions for simple problems
 
+### File Creation Guidelines
+- When creating files, check if they should be excluded from Git
+- Add appropriate entries to .gitignore when necessary
+
 ## Language-Specific Guidelines
 
-### JavaScript/TypeScript
-- Use existing package manager (npm/yarn/pnpm)
-- Follow TypeScript strict mode when enabled
-- Use existing state management patterns
-- Prefer functional components in React
+For detailed language rules, see:
+- [JavaScript/TypeScript](02-Languages/JavaScript-TypeScript.md)
+- [Python](02-Languages/Python.md)
+- [Go](02-Languages/Go.md)
+- [Rust](02-Languages/Rust.md)
+- [Java](02-Languages/Java.md)
 
-### Python
-- Follow PEP 8 style guidelines
-- Use virtual environments
-- Prefer type hints when available
-- Use existing logging and error handling patterns
+### Quick Reference
+- Always check existing package managers and configuration files
+- Follow project's established patterns and conventions
+- Use language-specific linting and formatting tools
+- Respect existing dependency management approaches
 
-### Go
-- Follow Go formatting standards (gofmt)
-- Use existing module structure
-- Handle errors explicitly
-- Write simple, readable code
+## Application Port Settings
 
-### Rust
-- Follow rustfmt formatting
-- Use cargo for package management
-- Handle Result types properly
-- Prefer ownership over borrowing when simple
+### Development Environment (Docker Compose)
+- **NEVER change these port numbers without explicit permission**
+- **Frontend**: `http://localhost:3000` (Port: 3000)
+- **Backend API**: `http://localhost:8000` (Port: 8000)
 
-### Java
-- Follow Google Java Style Guide
-- Use Maven/Gradle as configured
-- Implement proper exception handling
-- Use existing frameworks and patterns
+### Port Conflict Resolution
+If ports are already in use:
+```bash
+# Check what's using the port
+lsof -i :8000
+
+# Kill the process if needed
+kill -9 <PID>
+```
+
+## Modification Guidelines
+
+When making changes:
+- Carefully verify that modifications don't break other functionality
+- If other parts need updates, ensure existing expected behavior continues to work
+- Test thoroughly before considering changes complete
 
 ## Communication Style
 
@@ -120,4 +163,4 @@ When available, use MCP servers for:
 - Knowledge base access: `@knowledge-base:search(query)`
 
 ---
-Tags: #claude-code #global-config #best-practices
+Tags: #claude-code #global-config #best-practices #gemini-integration
