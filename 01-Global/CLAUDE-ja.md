@@ -102,11 +102,11 @@
 ## 言語固有のガイドライン
 
 詳細な言語ルールについては以下を参照：
-- [JavaScript/TypeScript](02-Languages/JavaScript-TypeScript.md)
-- [Python](02-Languages/Python.md)
-- [Go](02-Languages/Go.md)
-- [Rust](02-Languages/Rust.md)
-- [Java](02-Languages/Java.md)
+- [JavaScript/TypeScript](02-Languages/javascript-typescript.md)
+- [Python](02-Languages/python.md)
+- [Go](02-Languages/go.md)
+- [Rust](02-Languages/rust.md)
+- [Java](02-Languages/java.md)
 
 ### クイックリファレンス
 - 既存のパッケージマネージャーと設定ファイルを常に確認

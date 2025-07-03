@@ -60,7 +60,7 @@ Use the global CLAUDE.md files for consistent behavior across all projects:
 Reference language-specific guidelines in your project CLAUDE.md:
 ```markdown
 # Project CLAUDE.md
-[JavaScript Rules](https://github.com/your-org/claude-code-vault/blob/main/02-Languages/JavaScript-TypeScript.md)
+[JavaScript Rules](https://github.com/your-org/claude-code-vault/blob/main/02-Languages/javascript-typescript.md)
 ```
 
 ### Knowledge Base Access

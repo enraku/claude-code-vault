@@ -102,11 +102,11 @@ This file provides global guidance to Claude Code across all projects.
 ## Language-Specific Guidelines
 
 For detailed language rules, see:
-- [JavaScript/TypeScript](02-Languages/JavaScript-TypeScript.md)
-- [Python](02-Languages/Python.md)
-- [Go](02-Languages/Go.md)
-- [Rust](02-Languages/Rust.md)
-- [Java](02-Languages/Java.md)
+- [JavaScript/TypeScript](02-Languages/javascript-typescript.md)
+- [Python](02-Languages/python.md)
+- [Go](02-Languages/go.md)
+- [Rust](02-Languages/rust.md)
+- [Java](02-Languages/java.md)
 
 ### Quick Reference
 - Always check existing package managers and configuration files

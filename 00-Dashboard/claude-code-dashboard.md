@@ -7,15 +7,15 @@
 - [[01-Global/CLAUDE-ja|Global CLAUDE.md (Japanese)]]
 
 ### Language Rules
-- [[02-Languages/JavaScript-TypeScript|JavaScript/TypeScript]]
-- [[02-Languages/Python|Python]]
-- [[02-Languages/Go|Go]]
-- [[02-Languages/Rust|Rust]]
-- [[02-Languages/Java|Java]]
+- [[02-Languages/javascript-typescript|JavaScript/TypeScript]]
+- [[02-Languages/python|Python]]
+- [[02-Languages/go|Go]]
+- [[02-Languages/rust|Rust]]
+- [[02-Languages/java|Java]]
 
 ### Knowledge Base
-- [[03-Knowledge/MCP/MCP Guide|MCP Guide]]
-- [[03-Knowledge/Claude-Code/Best Practices|Claude Code Best Practices]]
+- [[03-Knowledge/MCP/mcp-guide|MCP Guide]]
+- [[03-Knowledge/Claude-Code/best-practices|Claude Code Best Practices]]
 - [[03-Knowledge/Development/Git Workflows|Git Workflows]]
 
 ## 📊 Recent Updates
